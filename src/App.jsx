@@ -1,8 +1,10 @@
+import { Header } from "./components/Header";
+
 function App() {
   return (
-    <>
-      <h1 className="text-center">Dictionary Web App</h1>
-    </>
+    <div className="container w-11/12 sm:w-3/5 m-auto">
+      <Header />
+    </div>
   );
 }
 
