@@ -1,9 +1,16 @@
 import search from "../assets/search_FILL0_wght400_GRAD0_opsz48.svg";
+import propTypes from "prop-types";
 
-export const SearchBar = () => {
+export const SearchBar = ({ handleSearch }) => {
+  const handleSubmit = (e) => {
+    let searchWord = e.target[0].value;
+    e.preventDefault();
+    if (searchWord !== "" && searchWord.length > 1) handleSearch(searchWord);
+  };
+
   return (
     <div className="mt-6">
-      <form className="relative">
+      <form onSubmit={handleSubmit} className="relative">
         <input
           type="text"
           placeholder="Search"
@@ -15,4 +22,8 @@ export const SearchBar = () => {
       </form>
     </div>
   );
+};
+
+SearchBar.propTypes = {
+  handleSearch: propTypes.func,
 };
