@@ -6,6 +6,7 @@ export const SearchBar = ({ handleSearch }) => {
     let searchWord = e.target[0].value;
     e.preventDefault();
     if (searchWord !== "" && searchWord.length > 1) handleSearch(searchWord);
+    e.target[0].value = "";
   };
 
   return (
