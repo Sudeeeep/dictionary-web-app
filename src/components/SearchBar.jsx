@@ -15,7 +15,7 @@ export const SearchBar = ({ handleSearch }) => {
         <input
           type="text"
           placeholder="Search"
-          className="w-full bg-[#F4F4F4] px-6 py-4 rounded-2xl"
+          className="w-full bg-[#F4F4F4] px-6 py-4 rounded-2xl dark:bg-[#1F1F1F] dark:text-white"
         />
         <button type="submit" className="absolute right-5 top-4">
           <img src={search} className="h-6 font-bold" />

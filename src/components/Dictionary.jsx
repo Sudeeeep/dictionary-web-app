@@ -44,7 +44,7 @@ export const Dictionary = ({
     <div className="mt-10">
       <div className="flex justify-between">
         <div className="flex flex-col gap-1">
-          <h1 className="font-bold text-3xl">{word}</h1>
+          <h1 className="font-bold text-3xl dark:text-white">{word}</h1>
           {pronunciation && <p className="text-[#a945f8]">{pronunciation}</p>}
           {!pronunciation && phoneticText[0] && (
             <p className="text-[#a945f8]">{phoneticText[0]}</p>
@@ -62,29 +62,33 @@ export const Dictionary = ({
         {meanings.map((item, index) => (
           <div key={index}>
             <div className="flex gap-6 items-center">
-              <p>{item.partOfSpeech}</p> <hr className="w-full" />
+              <p className="dark:text-white">{item.partOfSpeech}</p>{" "}
+              <hr className="w-full" />
             </div>
 
             <div className="mt-5">
               <div>
-                <h1 className="text-[#747474] mb-4">Meaning</h1>
+                <h1 className="text-[#757575] mb-4">Meaning</h1>
                 <ul>
                   {item.definitions.map((def, index) => (
                     <div key={index} className=" mb-4">
                       <li className="list-disc text-[#a945f8]">
-                        <span className="text-black"> {def.definition}</span>
+                        <span className="text-black dark:text-white">
+                          {" "}
+                          {def.definition}
+                        </span>
                       </li>
                       {def.example && (
-                        <p className="text-[#747474]">"{def.example}"</p>
+                        <p className="text-[#757575]">"{def.example}"</p>
                       )}
                     </div>
                   ))}
                 </ul>
               </div>
 
-              <div>
+              <div className="mb-3">
                 {item.synonyms.length > 0 && (
-                  <h1 className="text-[#747474]">Synonyms: </h1>
+                  <h1 className="text-[#757575]">Synonyms: </h1>
                 )}
                 {item.synonyms.map((syn, index) => (
                   <p key={index} className="text-[#a945f8]">
@@ -98,8 +102,12 @@ export const Dictionary = ({
       </div>
       <hr />
 
-      <h1 className="mt-5 text-[#747474]">Source</h1>
-      <a href={source[0]} target="__blank" className="underline">
+      <h1 className="mt-5 text-[#757575]">Source</h1>
+      <a
+        href={source[0]}
+        target="__blank"
+        className="underline dark:text-white"
+      >
         {source[0]}
       </a>
     </div>
