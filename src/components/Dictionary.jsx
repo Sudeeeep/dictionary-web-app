@@ -30,7 +30,7 @@ export const Dictionary = ({
         </h1>
       );
     }
-    console.log(error.response);
+
     return (
       <div className="text-center mt-20">
         <h1>{error.response.data.title}</h1>
