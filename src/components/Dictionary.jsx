@@ -19,21 +19,20 @@ export const Dictionary = ({
   };
 
   if (loading) {
-    return <h1 className="text-center mt-20">LOADING...</h1>;
+    return <h1 className="text-center mt-20 dark:text-white">LOADING...</h1>;
   }
 
   if (error) {
     if (error.message === "Network Error") {
       return (
-        <h1 className="text-center  mt-20">
+        <h1 className="text-center  mt-20 dark:text-white">
           {error.message}. Please check your connection
         </h1>
       );
     }
 
     return (
-      <div className="text-center mt-20">
-        <h1>{error.response.data.title}</h1>
+      <div className="text-center mt-20 dark:text-white">
         <p>{error.response.data.message}</p>
         <p>{error.response.data.resolution}</p>
       </div>
