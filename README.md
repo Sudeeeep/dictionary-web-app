@@ -38,7 +38,7 @@
 <!-- List the features of your application or follow the template. Don't share the figma file here :) -->
 
 - A simple Dictionary App built with React.js.
-- Uses [Free Dictionary](https://restcountries.com/) API.
+- Uses [Free Dictionary](https://dictionaryapi.dev/) API.
 - User can search for words in the search.
 - All the details of the word selected by the user is displayed.
 - User can play audio by clicking on play button to check for pronunciation of the word.
